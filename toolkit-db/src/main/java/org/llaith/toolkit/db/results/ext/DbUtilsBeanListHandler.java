@@ -1,0 +1,41 @@
+/*
+ * Copyright (c) 2013 Nos Doughty
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.llaith.toolkit.db.results.ext;
+
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.llaith.toolkit.db.results.ResultsHandler;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+/**
+ *
+ */
+public class DbUtilsBeanListHandler<T> implements ResultsHandler<List<T>> {
+
+    private final BeanListHandler<T> delegate;
+
+    public DbUtilsBeanListHandler(Class<T> klass) {
+        this.delegate = new BeanListHandler<>(klass);
+    }
+
+    @Override
+    public List<T> handle(ResultSet rs) throws SQLException {
+        return this.delegate.handle(rs);
+    }
+
+}
