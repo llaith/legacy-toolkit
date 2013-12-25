@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>toolkit</artifactId>
+        <groupId>org.llaith.toolkit</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>toolkit-dbadapter-ormlite</artifactId>
+
+    <dependencies>
+        <!-- project depends -->
+        <dependency>
+            <groupId>org.llaith.toolkit</groupId>
+            <artifactId>toolkit-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.llaith.toolkit</groupId>
+            <artifactId>toolkit-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- 3rd party -->
+        <dependency>
+            <groupId>com.jolbox</groupId>
+            <artifactId>bonecp</artifactId>
+            <version>0.8.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.j256.ormlite</groupId>
+            <artifactId>ormlite-core</artifactId>
+            <version>4.46</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.j256.ormlite</groupId>
+            <artifactId>ormlite-jdbc</artifactId>
+            <version>4.46</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</project>
