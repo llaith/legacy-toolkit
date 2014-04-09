@@ -57,6 +57,11 @@ toolkit-core:
     A simple registry pattern. Used for type-safe registration of
     implementors of a service interface.
 
+* **org.llaith.toolkit.core.repository:**
+
+    A typesafe collection pattern. Since Guava added FluentIterables, this
+    has basically been re-written as a wrapper around that.
+
 * **org.llaith.toolkit.core.stage:**
 
     An implementation of a set of queues of commands patterns to be
